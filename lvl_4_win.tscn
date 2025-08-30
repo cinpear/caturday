@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbdmlbd41wjup"]
+
+[ext_resource type="Texture2D" uid="uid://cck7rplhfml7d" path="res://images/complete.png" id="1_tds6c"]
+[ext_resource type="PackedScene" uid="uid://0ysck2i5pggd" path="res://next_lvl_4.tscn" id="2_hn0pb"]
+[ext_resource type="Script" path="res://next_lvl_4.gd" id="3_jnupn"]
+
+[node name="lvl4_win" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tds6c")
+
+[node name="next_lvl_4" parent="." instance=ExtResource("2_hn0pb")]
+position = Vector2(0, 227)
+script = ExtResource("3_jnupn")

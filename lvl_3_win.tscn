@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bewonr2cspoho"]
+
+[ext_resource type="Texture2D" uid="uid://cck7rplhfml7d" path="res://images/complete.png" id="1_sd55m"]
+[ext_resource type="PackedScene" uid="uid://dh3apr8xq76vk" path="res://next_lvl_3.tscn" id="2_bicvx"]
+
+[node name="lvl_3_win" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sd55m")
+
+[node name="next_lvl_3" parent="." instance=ExtResource("2_bicvx")]
+position = Vector2(0, 227)

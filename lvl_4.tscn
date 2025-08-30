@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://dtfyxogcc1oq8"]
+
+[ext_resource type="Script" path="res://lvl_4.gd" id="1_fi0m4"]
+[ext_resource type="Texture2D" uid="uid://ud20a8df55e2" path="res://images/bg4.png" id="1_m0xms"]
+[ext_resource type="Texture2D" uid="uid://dlotmpxu6rn8n" path="res://images/ref4.png" id="2_q425k"]
+[ext_resource type="PackedScene" uid="uid://cq3jr0a43rakh" path="res://cat_1_4.tscn" id="4_vtm5l"]
+[ext_resource type="PackedScene" uid="uid://b6chdsuff4tkm" path="res://platform.tscn" id="5_2csca"]
+[ext_resource type="PackedScene" uid="uid://5l13bksynq1n" path="res://cat_2_4.tscn" id="6_fls6i"]
+[ext_resource type="PackedScene" uid="uid://dnv06vyereaso" path="res://cat_3_4.tscn" id="7_p3pnr"]
+[ext_resource type="PackedScene" uid="uid://dfiwahqihyawr" path="res://cat_4_4.tscn" id="8_7gymd"]
+[ext_resource type="PackedScene" uid="uid://bivgss54b0tws" path="res://cat_5_4.tscn" id="9_bpqpp"]
+
+[node name="lvl4" type="Node2D"]
+script = ExtResource("1_fi0m4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_m0xms")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_q425k")
+
+[node name="cat1-4" parent="." instance=ExtResource("4_vtm5l")]
+position = Vector2(-324, -186)
+
+[node name="platform" parent="." instance=ExtResource("5_2csca")]
+position = Vector2(270, -213)
+
+[node name="cat2-4" parent="." instance=ExtResource("6_fls6i")]
+position = Vector2(-495, 249)
+
+[node name="platform2" parent="." instance=ExtResource("5_2csca")]
+position = Vector2(611, -301)
+scale = Vector2(1.5, 0.5)
+collision_layer = 2
+collision_mask = 2
+
+[node name="cat3-4" parent="." instance=ExtResource("7_p3pnr")]
+position = Vector2(-214, 250)
+
+[node name="platform3" parent="." instance=ExtResource("5_2csca")]
+position = Vector2(358, 44)
+collision_layer = 4
+collision_mask = 4
+
+[node name="cat4-4" parent="." instance=ExtResource("8_7gymd")]
+position = Vector2(-589, -118)
+
+[node name="platform4" parent="." instance=ExtResource("5_2csca")]
+position = Vector2(694, 50)
+collision_layer = 8
+collision_mask = 8
+
+[node name="cat5-4" parent="." instance=ExtResource("9_bpqpp")]
+position = Vector2(-130, -118)
+
+[node name="platform5" parent="." instance=ExtResource("5_2csca")]
+position = Vector2(783, -125)
+collision_layer = 16
+collision_mask = 16

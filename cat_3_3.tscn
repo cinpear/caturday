@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfmi4qvuwp1cv"]
+
+[ext_resource type="Script" path="res://cat_3_3.gd" id="1_18tm4"]
+[ext_resource type="Texture2D" uid="uid://bg1n6upl3tte3" path="res://images/cat3-3.png" id="1_o2olb"]
+
+[node name="cat3-3" type="Node2D"]
+script = ExtResource("1_18tm4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_o2olb")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-252, 0, -252, 167, 82, 166, 84, -7, 252, -7, 251, -172, -84, -170, -87, 0)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

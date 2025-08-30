@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn7qdkggl07tl"]
+
+[ext_resource type="Texture2D" uid="uid://cck7rplhfml7d" path="res://images/complete.png" id="2_efm4v"]
+[ext_resource type="Texture2D" uid="uid://yyl7gtpxcf7" path="res://images/refcomplete.png" id="3_7cqig"]
+[ext_resource type="PackedScene" uid="uid://vxhjdqtpav84" path="res://next_lvl_2.tscn" id="3_o0abj"]
+
+[sub_resource type="GDScript" id="GDScript_ktgxj"]
+script/source = "extends Node2D
+"
+
+[node name="lvl2_win" type="Node2D"]
+script = SubResource("GDScript_ktgxj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_efm4v")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_7cqig")
+
+[node name="nextlvl2" parent="." instance=ExtResource("3_o0abj")]
+position = Vector2(0, 227)

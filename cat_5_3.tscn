@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbppr4hcx6j8o"]
+
+[ext_resource type="Script" path="res://cat_5_3.gd" id="1_i13gd"]
+[ext_resource type="Texture2D" uid="uid://dhsermvagss17" path="res://images/cat5-3.png" id="1_k8gfu"]
+
+[node name="cat5-3" type="Node2D"]
+script = ExtResource("1_i13gd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_k8gfu")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(5, 0, -164, -1, -164, 168, 165, 167, 164, -169, 7, -170)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
